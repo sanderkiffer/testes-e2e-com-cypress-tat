@@ -7,5 +7,5 @@ it('successfully logs in', () => {
     { cacheSession: false }
   )
 
-  cy.wait('@getNotes')
+  cy.wait('@getNotes', {timeout: 20000})
 })
