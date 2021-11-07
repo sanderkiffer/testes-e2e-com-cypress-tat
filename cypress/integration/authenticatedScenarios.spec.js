@@ -35,7 +35,7 @@ describe('Scenarios where authentication is a pre-requirement', () => {
   it('logs out', () => {
     cy.visit('/')
     cy.wait('@getNotes', {timeout: 15000})
-    //teste1
+    //teste2
     if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
       cy.get('.navbar-toggle.collapsed')
         .should('be.visible')
