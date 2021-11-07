@@ -1,4 +1,4 @@
-it('successfully logs in', () => {
+it.only('successfully logs in', () => {
   cy.intercept('GET', '**/notes').as('getNotes')
 
   cy.login(
@@ -7,5 +7,5 @@ it('successfully logs in', () => {
     { cacheSession: false }
   )
 
-  cy.wait('@getNotes', {timeout: 20000})
+  cy.wait('@getNotes', {timeout: 30000})
 })
